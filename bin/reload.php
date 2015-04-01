@@ -1,9 +1,16 @@
 <?php
 
-require_once __DIR__ . '/base_script.php';
+function show_run($text, $command, $canFail = false)
+{
+    echo "\n* $text\n$command\n";
+    passthru($command, $return);
+    if (0 !== $return && !$canFail) {
+        echo "\n/!\\ The command returned $return\n";
+        exit(1);
+    }
+}
 
-build_bootstrap();
-
+show_run('Building bootstrap', 'vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/bin/build_bootstrap.php');
 show_run("Drop current database", "app/console doctrine:database:drop --force");
 show_run("Create database", "app/console doctrine:database:create");
 show_run("Create schema", "app/console doctrine:schema:create");
