@@ -38,6 +38,7 @@ class PostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
+            'validation_groups' => array('Default'),
             'data_class' => 'Acme\DemoBundle\Model\Post',
         ));
     }
