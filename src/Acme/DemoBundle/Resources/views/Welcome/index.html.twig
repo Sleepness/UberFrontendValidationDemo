@@ -7,11 +7,24 @@
     </div>
     <form method="post" {{ form_enctype(form) }} role="form" novalidate="novalidate">
         <div class="form-group">
-            <div class="input-group">
-                <label for="title">Title</label>
-                {{ form_widget(form.title) }}
-                {{ form_errors(form.title) }}
-            </div>
+            <label for="title">Title</label>
+            {{ form_widget(form.title) }}
+            {{ form_errors(form.title) }}<br />
+            <label for="content">Content</label>
+            {{ form_widget(form.content) }}
+            {{ form_errors(form.content) }}<br />
+            <label for="date">Date</label>
+            {{ form_widget(form.date) }}
+            {{ form_errors(form.date) }}<br />
+            <label for="authorName">Author Name</label>
+            {{ form_widget(form.authorName) }}
+            {{ form_errors(form.authorName) }}<br />
+            <label for="authorEmail">Author Email</label>
+            {{ form_widget(form.authorEmail) }}
+            {{ form_errors(form.authorEmail) }}<br />
+            <label for="authorHomePage">Author HomePage</label>
+            {{ form_widget(form.authorHomePage) }}
+            {{ form_errors(form.authorHomePage) }}<br />
             {{ form_row(form._token) }}
             <br />
             <button type="submit" class="form_submit_button" name="save">Save</button>
