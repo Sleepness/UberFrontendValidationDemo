@@ -30,18 +30,18 @@ class Post
     private $date;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(max=10)
+     * @Assert\NotBlank(groups={"authorInfo"})
+     * @Assert\Length(max=10, groups={"authorInfo"})
      */
     private $authorName;
 
     /**
-     * @Assert\Email()
+     * @Assert\Email(groups={"authorInfo"})
      */
     private $authorEmail;
 
     /**
-     * @Assert\Url()
+     * @Assert\Url(groups={"authorInfo"})
      */
     private $authorHomePage;
 

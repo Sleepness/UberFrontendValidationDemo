@@ -12,7 +12,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  * @author Viktor Novikov <viktor.novikov95@gmail.com>
  * @author Alexandr Zhulev <alexandrzhulev@gmail.com>
  */
-class PostType extends AbstractType
+class AuthorPostType extends AbstractType
 {
     /**
      * {@inheritDoc}
@@ -20,13 +20,6 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', 'text')
-            ->add('content', 'textarea', array(
-                'attr'  => array(
-                    'rows' => 4,
-                    'cols' => 45,)
-                ))
-            ->add('date', 'text')
             ->add('authorName', 'text')
             ->add('authorEmail', 'email')
             ->add('authorHomePage', 'url');
@@ -38,7 +31,7 @@ class PostType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'validation_groups' => array('Default'),
+            'validation_groups' => array('authorInfo'),
             'data_class' => 'Acme\DemoBundle\Model\Post',
         ));
     }
@@ -48,6 +41,6 @@ class PostType extends AbstractType
      */
     public function getName()
     {
-        return 'post';
+        return 'authorPost';
     }
 }
