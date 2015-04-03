@@ -3,42 +3,70 @@
 {% block uber_frontend_validation_demo_content %}
     <div class="page-header">
         <h1>UberFrontendValidationDemo</h1>
-        <p>demonstrates the usage of <a href="https://github.com/Sleepness/UberFrontendValidationBundle">UberFrontendValidationBundle</a></p>
+
+        <p>demonstrates the usage of <a href="https://github.com/Sleepness/UberFrontendValidationBundle">UberFrontendValidationBundle</a>
+        </p>
     </div>
-    <div class="col-md-5">
-        <form method="post" {{ form_enctype(form) }} novalidate="novalidate">
-            <div class="form-group">
-                {{ form_label(form.title) }}
-                {{ form_widget(form.title, {'attr': {'class': 'form-control'} }) }}
-                {{ form_errors(form.title) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.content) }}
-                {{ form_widget(form.content, {'attr': {'class': 'form-control'} }) }}
-                {{ form_errors(form.content) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.date) }}
-                {{ form_widget(form.date, {'attr': {'class': 'form-control'} }) }}
-                {{ form_errors(form.date) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.authorName) }}
-                {{ form_widget(form.authorName, {'attr': {'class': 'form-control'} }) }}
-                {{ form_errors(form.authorName) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.authorEmail) }}
-                {{ form_widget(form.authorEmail, {'attr': {'class': 'form-control'} }) }}
-                {{ form_errors(form.authorEmail) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.authorHomePage) }}
-                {{ form_widget(form.authorHomePage, {'attr': {'class': 'form-control'} }) }}
-                {{ form_errors(form.authorHomePage) }}
-            </div>
-            {{ form_row(form._token) }}
-            <button type="submit" class="form_submit_button btn btn-success" name="save">Save</button>
-        </form>
+    <div class="row">
+
+        <div class="col-md-5">
+            <form method="post" {{ form_enctype(form) }} novalidate="novalidate">
+                <div class="form-group">
+                    {{ form_label(form.title) }}
+                    {{ form_widget(form.title, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.title) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.content) }}
+                    {{ form_widget(form.content, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.content) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.date) }}
+                    {{ form_widget(form.date, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.date) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.authorName) }}
+                    {{ form_widget(form.authorName, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.authorName) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.authorEmail) }}
+                    {{ form_widget(form.authorEmail, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.authorEmail) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.authorHomePage) }}
+                    {{ form_widget(form.authorHomePage, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.authorHomePage) }}
+                </div>
+                {{ form_row(form._token) }}
+                <button type="submit" class="form_submit_button btn btn-success" name="save">Save</button>
+            </form>
+        </div>
+
+        <div class="col-md-5">
+            <form method="post" {{ form_enctype(author_form) }} novalidate="novalidate">
+                <div class="form-group">
+                    {{ form_label(author_form.authorName) }}
+                    {{ form_widget(author_form.authorName, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(author_form.authorName) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(author_form.authorEmail) }}
+                    {{ form_widget(author_form.authorEmail, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(author_form.authorEmail) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(author_form.authorHomePage) }}
+                    {{ form_widget(author_form.authorHomePage, {'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(author_form.authorHomePage) }}
+                </div>
+                {{ form_row(author_form._token) }}
+                <button type="submit" class="form_submit_button btn btn-success" name="save">Save</button>
+            </form>
+        </div>
+
     </div>
 {% endblock %}
