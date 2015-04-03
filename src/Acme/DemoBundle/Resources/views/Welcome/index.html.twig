@@ -3,42 +3,42 @@
 {% block uber_frontend_validation_demo_content %}
     <div class="page-header">
         <h1>UberFrontendValidationDemo</h1>
-        <p>demonstrates the usage of UberFrontendValidationBundle</p>
+        <p>demonstrates the usage of <a href="https://github.com/Sleepness/UberFrontendValidationBundle">UberFrontendValidationBundle</a></p>
     </div>
-    <form method="post" {{ form_enctype(form) }} role="form" novalidate="novalidate">
-        <div class="form-group">
-            <label for="title" class="col-sm-2">Title:</label>
-            {{ form_widget(form.title) }}
-            {{ form_errors(form.title) }}
-        </div>
-        <div class="form-group">
-            <label for="content" class="col-sm-2">Content:</label>
-            {{ form_widget(form.content) }}
-            {{ form_errors(form.content) }}
-        </div>
-        <div class="form-group">
-            <label for="date" class="col-sm-2">Date:</label>
-            {{ form_widget(form.date) }}
-            {{ form_errors(form.date) }}
-        </div>
-        <div class="form-group">
-            <label for="authorName" class="col-sm-2">Author Name:</label>
-            {{ form_widget(form.authorName) }}
-            {{ form_errors(form.authorName) }}
-        </div>
-        <div class="form-group">
-            <label for="authorEmail" class="col-sm-2">Author Email:</label>
-            {{ form_widget(form.authorEmail) }}
-            {{ form_errors(form.authorEmail) }}
-        </div>
-        <div class="form-group">
-            <label for="authorHomePage" class="col-sm-2">Author HomePage:</label>
-            {{ form_widget(form.authorHomePage) }}
-            {{ form_errors(form.authorHomePage) }}
-        </div>
-        {{ form_row(form._token) }}
-        <div class="col-sm-2">
-            <button type="submit" class="form_submit_button" name="save">Save</button>
-        </div>
-    </form>
+    <div class="col-md-5">
+        <form method="post" {{ form_enctype(form) }} novalidate="novalidate">
+            <div class="form-group">
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title, {'attr': {'class': 'form-control'} }) }}
+                {{ form_errors(form.title) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.content) }}
+                {{ form_widget(form.content, {'attr': {'class': 'form-control'} }) }}
+                {{ form_errors(form.content) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.date) }}
+                {{ form_widget(form.date, {'attr': {'class': 'form-control'} }) }}
+                {{ form_errors(form.date) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.authorName) }}
+                {{ form_widget(form.authorName, {'attr': {'class': 'form-control'} }) }}
+                {{ form_errors(form.authorName) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.authorEmail) }}
+                {{ form_widget(form.authorEmail, {'attr': {'class': 'form-control'} }) }}
+                {{ form_errors(form.authorEmail) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.authorHomePage) }}
+                {{ form_widget(form.authorHomePage, {'attr': {'class': 'form-control'} }) }}
+                {{ form_errors(form.authorHomePage) }}
+            </div>
+            {{ form_row(form._token) }}
+            <button type="submit" class="form_submit_button btn btn-success" name="save">Save</button>
+        </form>
+    </div>
 {% endblock %}
