@@ -12,6 +12,7 @@
             <directory>../src/*/*Bundle/Tests</directory>
             <directory>../src/*/Bundle/*Bundle/Tests</directory>
             <directory>../src/*Bundle/Tests</directory>
+            <directory>../vendor/sleepness/uber-frontend-validation-bundle/Tests</directory>
         </testsuite>
     </testsuites>
 
