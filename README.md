@@ -1,4 +1,5 @@
 UberFrontendValidationDemo
 ==========================
 
-A Symfony project created on April 1, 2015, 9:16 am.
+Small Symfony2 project, what help you to see [UberFrontendValidationBundle](https://github.com/Sleepness/UberFrontendValidationBundle)
+in action.
