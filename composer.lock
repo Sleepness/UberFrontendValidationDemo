@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d87d441dda19e3358235b63c72aa40b3",
+    "hash": "cf1cc5408cb01646b07d52b802cad1ae",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1161,12 +1161,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sleepness/UberFrontendValidationBundle.git",
-                "reference": "ace6d789a4e0a5f91a1f8131a3e66037a5a3492a"
+                "reference": "f65a0cff7faa1e07e5dad68f723372c2db4849c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sleepness/UberFrontendValidationBundle/zipball/ace6d789a4e0a5f91a1f8131a3e66037a5a3492a",
-                "reference": "ace6d789a4e0a5f91a1f8131a3e66037a5a3492a",
+                "url": "https://api.github.com/repos/Sleepness/UberFrontendValidationBundle/zipball/f65a0cff7faa1e07e5dad68f723372c2db4849c0",
+                "reference": "f65a0cff7faa1e07e5dad68f723372c2db4849c0",
                 "shasum": ""
             },
             "require": {
@@ -1215,7 +1215,7 @@
                 "Forms",
                 "validation"
             ],
-            "time": "2015-04-01 07:58:45"
+            "time": "2015-04-03 14:26:21"
         },
         {
             "name": "swiftmailer/swiftmailer",

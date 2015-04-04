@@ -28,8 +28,8 @@ class PostType extends AbstractType
                 ))
             ->add('date', 'text')
             ->add('authorName', 'text')
-            ->add('authorEmail', 'email')
-            ->add('authorHomePage', 'url');
+            ->add('file')
+            ->add('image');
     }
 
     /**

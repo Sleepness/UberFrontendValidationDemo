@@ -46,51 +46,29 @@ class Post
     private $authorHomePage;
 
     /**
-     * @param $authorEmail
+     * @Assert\File(maxSize="2M")
      */
-    public function setAuthorEmail($authorEmail)
+    private $file;
+
+    /**
+     * @Assert\Image()
+     */
+    private $image;
+
+    /**
+     * @param $title
+     */
+    public function setTitle($title)
     {
-        $this->authorEmail = $authorEmail;
+        $this->title = $title;
     }
 
     /**
      * @return mixed
      */
-    public function getAuthorEmail()
+    public function getTitle()
     {
-        return $this->authorEmail;
-    }
-
-    /**
-     * @param $authorHomePage
-     */
-    public function setAuthorHomePage($authorHomePage)
-    {
-        $this->authorHomePage = $authorHomePage;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAuthorHomePage()
-    {
-        return $this->authorHomePage;
-    }
-
-    /**
-     * @param $authorName
-     */
-    public function setAuthorName($authorName)
-    {
-        $this->authorName = $authorName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAuthorName()
-    {
-        return $this->authorName;
+        return $this->title;
     }
 
     /**
@@ -126,18 +104,82 @@ class Post
     }
 
     /**
-     * @param $title
+     * @param $authorName
      */
-    public function setTitle($title)
+    public function setAuthorName($authorName)
     {
-        $this->title = $title;
+        $this->authorName = $authorName;
     }
 
     /**
      * @return mixed
      */
-    public function getTitle()
+    public function getAuthorName()
     {
-        return $this->title;
+        return $this->authorName;
+    }
+
+    /**
+     * @param $authorEmail
+     */
+    public function setAuthorEmail($authorEmail)
+    {
+        $this->authorEmail = $authorEmail;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthorEmail()
+    {
+        return $this->authorEmail;
+    }
+
+    /**
+     * @param $authorHomePage
+     */
+    public function setAuthorHomePage($authorHomePage)
+    {
+        $this->authorHomePage = $authorHomePage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthorHomePage()
+    {
+        return $this->authorHomePage;
+    }
+
+    /**
+     * @param $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }
