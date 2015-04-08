@@ -1161,12 +1161,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sleepness/UberFrontendValidationBundle.git",
-                "reference": "9dd19e289607f0ab55f280b23f79f11cc46801c8"
+                "reference": "2b86b7a29f827f7bfdc3ade061c9d2a179249b44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sleepness/UberFrontendValidationBundle/zipball/9dd19e289607f0ab55f280b23f79f11cc46801c8",
-                "reference": "9dd19e289607f0ab55f280b23f79f11cc46801c8",
+                "url": "https://api.github.com/repos/Sleepness/UberFrontendValidationBundle/zipball/2b86b7a29f827f7bfdc3ade061c9d2a179249b44",
+                "reference": "2b86b7a29f827f7bfdc3ade061c9d2a179249b44",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1186,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "1.0.0-dev"
+                    "dev-develop": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -1215,7 +1215,7 @@
                 "Forms",
                 "validation"
             ],
-            "time": "2015-04-05 20:11:25"
+            "time": "2015-04-08 21:52:04"
         },
         {
             "name": "swiftmailer/swiftmailer",
